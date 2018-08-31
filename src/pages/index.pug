@@ -1,0 +1,87 @@
+extends ../layout/root
+block title 
+	title Doc title
+block meta_k 
+	meta(name="keywords" content="meta_k .........text")
+block meta_d 
+	meta(name="description" content="meta_d ......text")
+
+block main
+	+b.MAIN.main_home
+		.container
+			// col 1
+			+e.row
+				+e.col_left
+					+b.box-info_user
+						+e.col_1
+							+e.logo
+								+e.logo-box-text
+									+e.logo-text_1 True 
+									+e.logo-text_2 Web
+								+e.logo-box-img
+									+e.IMG(src="img/logo.gif").logo-img
+						+e.col_2
+							+e.text Информационно-технологическая революция приводит элемент политического процесса, cогласно концепции М.Маклюэна. политическая модернизация фактически интегрирует
+							+e.list
+								+e.list-item_name Кристина Малышева
+								+e.list-item_login @christy
+								+e.list-item_location
+									+e.list-icon.fa.fa-map-marker
+									SPAN Россия
+								+e.list-item_count-works
+									+e.list-icon.fa.fa-file-text-o
+									SPAN 43 проект
+								+e.list-item_prof
+									+e.list-icon.fa.fa-cube
+									SPAN UI/UX Designer
+								+e.list-item_rating
+									+e.list-icon.fa.fa-star-o
+									SPAN 7,337
+
+
+					+b.more-info
+						+e.item
+							+e.btn-toggle В первом приближении выветривание параллельно?
+							+e.box-toggle Цветность возникает биокосный копролит. Деградация воспроизводима в лабораторных условиях. Пластичность доступна. Кора выветривания качественно окисляет лизиметр. Как следует из закона сохранения массы и энергии, кротовина параллельна.
+
+						+e.item
+							+e.btn-toggle Несмотря на кажущуюся простоту эксперимента?
+							+e.box-toggle Цветность возникает биокосный копролит. Деградация воспроизводима в лабораторных условиях. Пластичность доступна. Кора выветривания качественно окисляет лизиметр. Как следует из закона сохранения массы и энергии, кротовина параллельна.
+
+						+e.item
+							+e.btn-toggle Как следует из закона сохранения массы и энергии?
+							+e.box-toggle Цветность возникает биокосный копролит. Деградация воспроизводима в лабораторных условиях. Пластичность доступна. Кора выветривания качественно окисляет лизиметр. Как следует из закона сохранения массы и энергии, кротовина параллельна.
+
+						+e.item
+							+e.btn-toggle Коллембола однородно восстанавливает режим?
+							+e.box-toggle Цветность возникает биокосный копролит. Деградация воспроизводима в лабораторных условиях. Пластичность доступна. Кора выветривания качественно окисляет лизиметр. Как следует из закона сохранения массы и энергии, кротовина параллельна.
+
+						+e.item
+							+e.btn-toggle Цветность возникает биокосный копролит?
+							+e.box-toggle Цветность возникает биокосный копролит. Деградация воспроизводима в лабораторных условиях. Пластичность доступна. Кора выветривания качественно окисляет лизиметр. Как следует из закона сохранения массы и энергии, кротовина параллельна.
+
+				// col 2
+				+e.col_right
+					// chat
+					+b.chat(id="chat")
+						+e.company
+							+e.company-col_1
+								+e.company-box-img
+									+e.IMG(src="img/avatar-1.png").company-img
+							+e.company-col_2
+								+e.company-name Orange — строительная компания
+								+e.company-text Логотип, фирменный стиль, посадочная страница
+							+e.company-col_3
+								+e.company-btn_search.fa.fa-search
+								+e.company-btn_more.fa.fa-ellipsis-h
+
+						+e.list(id="chat__list")
+							+e.list-out(id="chat__list-out")
+
+						+e.FORM(data-ctr="chat.php" data-action="add" id="chat__form" enctype="multipart/form-data").form
+							+e.INPUT(type="file" name="file[]" id="chat__form-file" multiple).form-file
+							+e.LABEL(for="chat__form-file").form-label_file.fa.fa-paperclip
+							+e.form-box-textarea
+								+e.TEXTAREA(name="text" placeholder="Напишите сообщение ..." id="chat__form-textarea").form-textarea
+							+e.INPUT(type="submit" id="chat__form-btn").form-btn.btn_regular Отправить
+

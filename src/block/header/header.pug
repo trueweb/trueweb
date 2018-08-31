@@ -1,0 +1,20 @@
+mixin b-header()
+	+b.HEADER.header
+		+e.box
+			.container
+				+e.row
+					+b.BUTTON.btn_burger-header(id="btn_burger-header" data-id-control="nav__header")
+						+e.item
+					+b.NAV.nav(class="_header" id="nav__header")
+						+e.UL.list#nav-list_header
+							+e.LI.item
+								+e.A.link(href="#") Новости
+							+e.LI.item
+								+e.A.link(href="#") Рейтинг
+							+e.LI.item_logo
+								+e.A.link(href="#")
+									+e.IMG.img(src="img/logo-nav.png")
+							+e.LI.item
+								+e.A.link(href="#") Помощь
+							+e.LI.item
+								+e.A.link(href="#") Контакты

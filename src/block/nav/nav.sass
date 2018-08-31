@@ -1,0 +1,41 @@
+.nav_header
+	@media #{$phone}
+		position: absolute
+		top: 0
+		right: 0
+		width: 100%
+		z-index: 1000
+		&.active
+			.nav
+				&__list
+					display: flex
+					flex-wrap: wrap
+					background-color: rgba(255, 255, 255, .8)
+					padding: 15px 0
+				&__item
+					width: 100%
+					text-align: center
+					padding-top: 20px
+					&_logo
+						display: none
+	.nav
+		&__list
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			@media #{$phone}
+				display: none
+		&__item
+			display: flex
+			align-items: center
+			font-weight: 500
+			@media #{$phone}
+				justify-content: center
+			&_logo
+				margin: 0 40px
+		&__link
+			display: inline-block
+			color: #000
+			padding: 0 12px
+			line-height: 1

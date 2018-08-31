@@ -1,0 +1,6 @@
+mixin b-icon_svg(name)
+	+b.SVG.icon_svg(class="_" + name)
+		use(xlink:href="vendor/sprite/svg-symbols.svg#" + name)
+
+mixin b-icon_png(name)
+	+b.I.icon_png(class=`_${name} ${name}`)

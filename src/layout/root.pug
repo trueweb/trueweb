@@ -1,0 +1,72 @@
+include ../../node_modules/bemto.pug/bemto.pug
+include ../block/index
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="shortcut icon" href="favicon.ico" type="image/x-icon")
+		meta(http-equiv="X-UA-Compatible", content="ie=edge")
+		link(rel="stylesheet", href="vendor/lightbox/css/lightbox.min.css")
+		link(rel="stylesheet", href="vendor/bootstrap/bootstrap.min.css")
+		link(rel="stylesheet", href="vendor/fontawesome/css/font-awesome.min.css")
+		link(rel="stylesheet", href="css/style.css")
+		block meta_k
+		block meta_d
+		block title
+	body
+		style.
+			.preloader{
+				min-height: 100vh;
+				height: 100%;
+				width: 100%;
+				background-color: rgb(255,255,255);
+				color: rgb(36,111,176);
+				font-size: 45px;
+				font-family:  Arial, sans-serif;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+				position: fixed;
+				top: 0;
+				left: 0;
+				transition-duration: 1s;
+				display: none;
+				z-index: 10000;
+			}
+			.preloader.noload{
+			display: flex;
+			}
+			.preloader__text_1{
+			font-size: 45px;
+			}
+			.preloader__text_2{
+			font-size: 20px;
+			}
+			.wrapper.noload{
+			display: none;
+			}
+		script.
+			document.addEventListener("DOMContentLoaded", function(){
+				document.querySelector('.preloader').classList.remove('noload');
+			});
+
+		.preloader
+			.preloader__text_1 Loading
+			IMG(src="img/preloader.gif")
+		.wrapper
+			script.
+				document.querySelector('.preloader').classList.add('noload');
+
+			+b-header()
+			block main
+			+b-footer()
+
+
+			
+			script(src="vendor/jquery.min.js")
+			script(src="vendor/jquery.nicescroll.min.js")
+			script(src="vendor/lightbox/js/lightbox.min.js")
+			script(src="vendor/moment.min.js")
+			script(src="js/app.js")

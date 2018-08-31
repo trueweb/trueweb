@@ -1,0 +1,15 @@
+.main
+	width: 100%
+	flex: 1
+	&__row
+		display: flex
+		flex-wrap: wrap
+		@media #{$tablet}
+			flex-direction: column
+	&__col
+		width: 50%
+		padding: 10px
+		@media #{$tablet}
+			width: 100%
+		&_right
+			height: calc(100vh - 150px)

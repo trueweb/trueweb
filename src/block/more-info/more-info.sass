@@ -1,0 +1,30 @@
+.more-info
+	&__item
+		margin-bottom: 10px
+		border: 1px solid $text-gray-light
+		cursor: pointer
+		&.active
+			cursor: auto
+			.more-info
+				&__btn-toggle
+					color: #000
+					&::after
+						content: "\f00d"
+				&__box-toggle
+					color: $text-gray-dark
+	&__btn-toggle
+		display: flex
+		justify-content: space-between
+		color: $text-gray-dark
+		cursor: pointer
+		font-weight: 500
+		padding: 18px
+		&::after
+			font-family: 'FontAwesome'
+			content: "\f107"
+			color: $text-gray-dark * 1.5
+			padding-left: 15px
+			display: inline-block
+	&__box-toggle
+		display: none
+		padding: 0 18px 18px
