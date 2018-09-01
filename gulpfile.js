@@ -54,7 +54,7 @@ gulp.task('sass', () => {
 	setTimeout( () => {
 		return gulp.src('src/assets/style.sass')
 			.pipe(plumber())
-			.pipe(sass())
+			.pipe(sass({outputStyle: 'expanded'}))
 			.pipe(gulpIf( !isProduction, sourcemaps.init() ))
 			.pipe(autoprefixer())
 			.pipe(gulpIf( isProduction, csso() ))
